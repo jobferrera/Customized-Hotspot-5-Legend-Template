@@ -1,6 +1,8 @@
 # Customized-Hotspot-5-Legend-Template
 The custom template is based on hotspot 5 legend template for mikrotik hotspot web page
 
+![Alt text](http://interlinkit.solutions/images/hotspot-5-legend-custom-portal.png)
+
 Designing a custom Wi-Fi hotspot with an interlink feature can be a complex process, but I can provide you with a general outline to help you get started. Keep in mind that this is a high-level overview, and the actual implementation details may vary depending on your specific requirements and technical expertise.
 
 Define Requirements: Begin by clarifying your requirements for the interlink Wi-Fi hotspot. Consider factors such as coverage area, number of concurrent users, desired data transfer speeds, security measures, and any additional features you may want to incorporate.
