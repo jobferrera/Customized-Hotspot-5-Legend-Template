@@ -1,0 +1,237 @@
+/*
+ *   Copyright (c) 2023 Mugnet Inc.
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+/*
+ *   Copyright (c) 2023 Mugnet Inc.
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+/*
+ *   Copyright (c) 2023 Mugnet Inc.
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+body {
+  background-color: #f3f3f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; }
+  body main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c1022; }
+    body main .container-box {
+      width: 400px;
+      height: 550px;
+      background: rgba(0, 0, 0, 0.75);
+      position: relative;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; }
+      body main .container-box > span {
+        position: absolute;
+        inset: 3px;
+        border-radius: 10px;
+        background: #0c1022;
+        z-index: 1; }
+      body main .container-box:after {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 750px;
+        background-image: conic-gradient(transparent, transparent, transparent, #ff0073);
+        animation: animate 4s linear infinite;
+        animation-delay: -2s; }
+      body main .container-box:before {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+        animation: animate 4s linear infinite; }
+      body main .container-box .body {
+        z-index: 2;
+        padding: 20px;
+        width: 400px; }
+        body main .container-box .body .notice {
+          color: #fff;
+          text-align: center;
+          margin: 10px; }
+        body main .container-box .body form .controls {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          margin-bottom: 15px; }
+          body main .container-box .body form .controls > div {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold; }
+            body main .container-box .body form .controls > div:first-child {
+              border-radius: 10px 0 0 10px; }
+            body main .container-box .body form .controls > div:last-child {
+              border-radius: 0 10px 10px 0; }
+        body main .container-box .body form #lpass, body main .container-box .body form #luser {
+          color: #fff; }
+        body main .container-box .body form .inputs {
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          body main .container-box .body form .inputs .form-group {
+            margin-bottom: 10px; }
+          body main .container-box .body form .inputs input[type=text], body main .container-box .body form .inputs input[type=password] {
+            width: 97%;
+            padding: 10px 5px;
+            font-size: 1.2em;
+            outline: none;
+            border-radius: 0;
+            border: none; }
+          body main .container-box .body form .inputs .input-username {
+            display: flex; }
+            body main .container-box .body form .inputs .input-username > span {
+              width: 45px;
+              height: 45px;
+              background: url(../img/account.svg);
+              padding: 2px;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 75%; }
+          body main .container-box .body form .inputs .input-password {
+            display: flex; }
+            body main .container-box .body form .inputs .input-password > span {
+              width: 45px;
+              border-radius: 0 0 0 10px;
+              height: 45px;
+              background: url(../img/password.svg);
+              padding: 2px;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-position: center; }
+            body main .container-box .body form .inputs .input-password > input {
+              border-radius: 0 0 10px 0; }
+          body main .container-box .body form .inputs input[type=submit] {
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            right: 25px;
+            margin-top: -15px;
+            border-radius: 50%;
+            outline: none;
+            border: 6px solid #0c1022;
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #ff0073; }
+        body main .container-box .body .hs-title {
+          color: #ff0073;
+          font-weight: bold;
+          text-align: center;
+          font-size: 2em;
+          margin: 0; }
+      body main .container-box .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.btn-default {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 12pt;
+  outline: none;
+  background-color: #00ccff;
+  border: none; }
+
+/*
+ *   Copyright (c) 2023 Mugnet Inc.
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+table {
+  border-collapse: collapse;
+  text-align: left;
+  margin: 0 auto;
+  border: none;
+  border-color: #1f233bc1; }
+  table tr td {
+    color: #fff;
+    padding: 10px; }

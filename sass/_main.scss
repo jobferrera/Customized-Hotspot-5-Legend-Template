@@ -1,0 +1,221 @@
+/*
+ *   Copyright (c) 2023 Mugnet Inc.
+ *   All rights reserved.
+
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy
+ *   of this software and associated documentation files (the "Software"), to deal
+ *   in the Software without restriction, including without limitation the rights
+ *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *   copies of the Software, and to permit persons to whom the Software is
+ *   furnished to do so, subject to the following conditions:
+ 
+ *   The above copyright notice and this permission notice shall be included in all
+ *   copies or substantial portions of the Software.
+ 
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *   SOFTWARE.
+ */
+
+
+@mixin flex-center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ body{
+    background-color: $gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    main{
+        width: 100%;
+        min-height: 100vh;
+        @include flex-center();
+        background-color: $dark-blue;
+        .container{
+            &-box{
+                width:400px;
+                height:550px;
+                background: $black;
+                position:relative;
+                border-radius:10px;
+                @include flex-center();
+                overflow: hidden;
+                &>span{
+                    position:absolute;
+                    inset:3px;
+                    border-radius:10px;
+                    background: $dark-blue;
+                    z-index: 1;
+                }
+                &:after{
+                    content: "";
+                    position:absolute;
+                    width:700px;
+                    height:750px;
+                    background-image: conic-gradient(transparent, transparent,transparent, $stroke1);
+                    animation: animate 4s linear infinite;
+                    animation-delay: -2s;
+                }
+           
+                &:before{
+                    content: "";
+                    position:absolute;
+                    width:700px;
+                    height:700px;
+                    background-image: conic-gradient(transparent, transparent,transparent, $stroke2);
+                    animation: animate 4s linear infinite;
+                }
+                .body{  
+                    z-index: 2;
+                    padding:20px;
+                    width:400px;
+                    
+                    .notice{
+                        color: $white;
+                        text-align: center;
+                        margin:10px;
+                    }
+                    form{
+                       
+                        .controls{
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            margin-bottom:15px;
+                            
+                             &>div{
+                                width:100%;
+                                padding:15px;
+                                text-align: center; 
+                                font-weight: bold;
+                                &:first-child{
+                                    border-radius: 10px 0 0 10px;
+                                }
+                                &:last-child{
+                                    border-radius: 0 10px 10px 0;
+                                }
+                             }
+                          
+                            
+                        }
+                        #lpass,#luser{
+                            color: $white;
+                        }
+
+                       
+                            .inputs{
+                                display:flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                .form-group{
+                                    margin-bottom:10px;
+                                }
+                                input[type=text],input[type=password]{
+                                    width:97%;
+                                    padding: 10px 5px;
+                                    font-size: 1.2em;
+                                    outline:none;
+                                    border-radius: 0;
+                                    border: none;
+                                }
+                                .input{
+                                    &-username{
+                                        display: flex;
+
+                                        &>span{ 
+                                            width:45px;
+                                            height:45px;
+                                            background: url(../img/account.svg);
+                                            padding:2px;
+                                            background-color: $white;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            background-size: 75%;
+                                        }
+                                        &>input{ 
+                                            
+                                           
+                                        }
+                                    }
+                                    &-password{
+                                        display: flex;
+
+                                        &>span{ 
+                                            width:45px;
+                                            border-radius: 0 0 0 10px;
+                                            height:45px;
+                                            background: url(../img/password.svg);
+                                            padding:2px;
+                                            background-color: $white;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                        }
+                                        &>input{ 
+                                            border-radius: 0 0 10px 0;
+                                        }
+                                    }
+                                }
+                                .input-password{
+                                    
+                                }
+                                input[type=submit]{
+                                    position:absolute;
+                                    width:72px;
+                                    height:72px;
+                                    right:25px;
+                                    margin-top:-15px;
+                                    border-radius:50%;
+                                    outline:none;
+                                    border:6px solid $dark-blue;
+                                    font-size:1.6em;
+                                    font-weight: bold;
+                                    color: $stroke1;
+                                }
+                            }
+                        
+                    }
+
+                    .hs-title{
+                        color: $stroke1;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 2em;
+                        margin:0;
+                    }
+                    
+                }
+                .footer{
+     @include flex-center();
+                }
+            }
+        }
+    }
+ }
+
+ @keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ }
+
+ .btn-default{
+    padding:10px 20px;
+    border-radius:10px;
+    font-size:12pt;
+    outline:none;
+    background-color: $stroke2;
+    border: none;
+    &:hover{
+
+    }
+ }
